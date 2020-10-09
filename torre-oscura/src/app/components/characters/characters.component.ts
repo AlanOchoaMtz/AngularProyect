@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { KatethService } from '../../services/kateth.service';
 
 @Component({
   selector: 'app-characters',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CharactersComponent implements OnInit {
 
-  constructor() { }
+  characters:any[] = [];
+
+  constructor( private _katethService: KatethService) {
+
+   }
 
   ngOnInit(): void {
+    this.characters = this._katethService.getCharacters();
+    console.log(this.characters);
   }
 
 }

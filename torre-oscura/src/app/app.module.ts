@@ -7,6 +7,7 @@ import { HomeComponent } from './components/home/home.component';
 import { CharactersComponent } from './components/characters/characters.component';
 import { AboutComponent } from './components/about/about.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
+import { KatethService } from './services/kateth.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,9 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    KatethService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
