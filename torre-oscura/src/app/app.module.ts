@@ -8,6 +8,7 @@ import { CharactersComponent } from './components/characters/characters.componen
 import { AboutComponent } from './components/about/about.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { KatethService } from './services/kateth.service';
+import { CharacterComponent } from './components/character/character.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { KatethService } from './services/kateth.service';
     HomeComponent,
     CharactersComponent,
     AboutComponent,
-    NavbarComponent
+    NavbarComponent,
+    CharacterComponent
   ],
   imports: [
     BrowserModule,
