@@ -5,7 +5,7 @@
         <div class="card-body">
             <h5 class="card-title">{{chars.nombre}}</h5>
             <p class="card-text">{{ chars.biografy }}</p>
-            <a routerLink="chars/id" class="btn btn-outline-primary">Ver más...</a>
+            <a [routerLink]="['/chars',i]" class="btn btn-outline-primary">Ver más...</a>
         </div>
     </div>
 </div>

@@ -9,7 +9,7 @@ import { CharacterComponent } from './components/character/character.component';
 const routes: Routes = [
   { path: 'home', component: HomeComponent},
   { path: 'kateth', component: CharactersComponent},
-  { path: 'kateth/character/:id', component: CharacterComponent},
+  { path: 'chars/:id', component: CharacterComponent},
   { path: 'about', component: AboutComponent},
   { path: '**', pathMatch: 'full', redirectTo: 'home'}
 ];
