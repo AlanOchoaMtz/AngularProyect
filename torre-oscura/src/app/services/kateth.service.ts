@@ -25,11 +25,30 @@ export class KatethService {
         console.log("Servicio para usar");
     }
 
-    getCharacters() {
+    getCharacters():Personaje[] {
         return this.characters;
     }
 
     getCharacter( idx: string){
       return this.characters[idx];
     }
+
+    buscarPersonajes( termino:string ){
+      let personajesArr:Personaje[] = [];
+      termino = termino.toLowerCase();
+
+      for( let personaje of this.characters){
+        let nombre = personaje.nombre.toLowerCase();
+        if( nombre.indexOf( termino ) >= 0){
+          personajesArr.push( personaje )
+        }
+      }
+      return personajesArr;
+    }
+}
+
+export interface Personaje{
+  nombre:string;
+  biografy:string;
+  img:string;
 }

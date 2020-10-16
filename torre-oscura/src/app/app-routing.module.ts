@@ -4,11 +4,12 @@ import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { CharactersComponent } from './components/characters/characters.component';
 import { CharacterComponent } from './components/character/character.component';
-
+import { SearchComponent } from './components/search/search.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent},
   { path: 'kateth', component: CharactersComponent},
+  { path: 'search/:termino', component: SearchComponent},
   { path: 'chars/:id', component: CharacterComponent},
   { path: 'about', component: AboutComponent},
   { path: '**', pathMatch: 'full', redirectTo: 'home'}
