@@ -10,6 +10,7 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { KatethService } from './services/kateth.service';
 import { CharacterComponent } from './components/character/character.component';
 import { SearchComponent } from './components/search/search.component';
+import { CharCardComponent } from './components/char-card/char-card.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { SearchComponent } from './components/search/search.component';
     AboutComponent,
     NavbarComponent,
     CharacterComponent,
-    SearchComponent
+    SearchComponent,
+    CharCardComponent
   ],
   imports: [
     BrowserModule,

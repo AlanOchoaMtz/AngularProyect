@@ -1,0 +1,12 @@
+    <div class="card animated fadeIn fast">
+        <img src="{{ character.img }}" height="400" class="card-img-top" alt="{{character.nombre}}">
+        <div class="card-body">
+            <h5 class="card-title">{{character.nombre}}</h5>
+            <p class="card-text">{{ character.biografy }}</p>
+	    <button (click)="verCharacter()"
+	       type="button" class="btn btn-outline-primary btn-block">
+	      Ver más...
+	    </button>
+        </div>
+    </div>
+

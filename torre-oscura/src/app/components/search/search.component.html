@@ -1,6 +1,6 @@
 <h1>Kateth <small>de la torre oscura: {{ termino }}</small></h1>
 
-<div class="row" *ngIf="personajes.length == 0">
+<div class="row" *ngIf="characters.length == 0">
     <div class="col-md-12">
         <div class="alert alert-info" role="alert">
             No hay alguien con el nombre: {{ termino }}
@@ -9,12 +9,5 @@
 </div>
 
 <div class="card-columns">
-    <div class="card animated fadeIn fast" *ngFor="let chars of personajes; let i = index">
-        <img src="{{ chars.img }}" height="400" class="card-img-top" alt="{{chars.nombre}}">
-        <div class="card-body">
-            <h5 class="card-title">{{chars.nombre}}</h5>
-            <p class="card-text">{{ chars.biografy }}</p>
-            <a [routerLink]="['/chars',i]" class="btn btn-outline-primary">Ver más...</a>
-        </div>
-    </div>
+  <app-char-card  [character]="character" [index]="character.idx" *ngFor="let character of characters; let i = index"></app-char-card>
 </div>

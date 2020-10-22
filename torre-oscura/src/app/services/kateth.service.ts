@@ -37,9 +37,11 @@ export class KatethService {
       let personajesArr:Personaje[] = [];
       termino = termino.toLowerCase();
 
-      for( let personaje of this.characters){
+      for( let i = 0; i < this.characters.length; i++){
+	let personaje = this.characters[i];
         let nombre = personaje.nombre.toLowerCase();
         if( nombre.indexOf( termino ) >= 0){
+	  personaje.idx = i;
           personajesArr.push( personaje )
         }
       }
@@ -51,4 +53,5 @@ export interface Personaje{
   nombre:string;
   biografy:string;
   img:string;
+  idx?: number;
 }
